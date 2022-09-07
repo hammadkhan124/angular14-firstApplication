@@ -1,0 +1,71 @@
+<h2>Programming Book List!</h2>
+
+<!--   
+ //interpolation example
+<img src="{{src}}" width="100" />
+<ul>
+    <li>
+        {{name}} by  {{author}}
+    </li>
+</ul>
+
+
+//prperty binding example
+<img [src]="src2" [width]="100" />
+<ul>
+    <li>
+        {{name2}} by  {{author2}}
+    </li>
+</ul>
+<button [disabled]="isDisabled" >click</button>
+<br><br>
+
+<button (click)="onclick()"  (mouseover)="onclick()" >click</button>
+<br>
+
+
+//two way binding
+
+<input type="text" [(ngModel)]="myname">
+<p>{{myname}}</p>
+
+-->
+
+
+<!-- Structural Directive
+
+<button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+    <ng-container *ngIf="!isShowing">show Books</ng-container>
+</button>
+
+
+
+<ul *ngIf="isShowing">
+    
+    <li>
+        <img src="{{src}}" width="100" />
+        {{name}} by  {{author}}
+</li>
+<li>
+        <img [src]="src2" [width]="100" />
+        {{name2}} by  {{author2}}
+    </li>
+</ul>
+-->
+<!--
+<button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+    <ng-container *ngIf="!isShowing">show Books</ng-container>
+</button>
+-->
+<!--<button (click)="isShowing = !isShowing">click</button>-->
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let singleBook of books; let i=index">
+<app-book [book]="singleBook"></app-book>
+</ng-container>
+</ul>
+
+
+
+
